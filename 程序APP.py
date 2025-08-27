@@ -26,7 +26,6 @@ feature_ranges = {
     "CRP": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 3.0},    # CRP：C反应蛋白（mg/L），常规范围0-10（炎症时升高）
     "WBC": {"type": "numerical", "min": 0.0, "max": 50.0, "default": 7.0},     # WBC：白细胞计数（×10^9/L），常规范围4-10
     "LY": {"type": "numerical", "min": 0.0, "max": 10.0, "default": 2.5},      # LY：淋巴细胞计数（×10^9/L），常规范围0.8-4
-    "Albumin": {"type": "numerical", "min": 10.0, "max": 60.0, "default": 40.0},# Albumin：白蛋白（g/L），补充笔误“c”，常规范围35-50
     "A/B": {"type": "numerical", "min": 0.5, "max": 5.0, "default": 1.8},      # A/B：白蛋白/球蛋白比值，常规范围1.2-2.5
     
     # 分类变量（categorical）：options按“无/有”逻辑设为[0,1]
@@ -97,3 +96,4 @@ if st.button("Predict"):
     # 保存并显示 SHAP 图
     plt.savefig("shap_force_plot.png", bbox_inches='tight', dpi=1200)
     st.image("shap_force_plot.png")
+
